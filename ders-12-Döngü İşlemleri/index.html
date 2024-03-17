@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Döngü İşlemleri</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Döngü İşlemleri</h1>
+      <!-- ul>li*4 yerine-->
+      <ul>
+        <li v-for="karakter in karakterler">{{ karakter }}</li>
+      </ul>
+      <ul>
+        <!-- (ozellik , index) yazarak öğenin kaçıncı indexte olduğunu görebiliriz -->
+        <li v-for="(ozellik, index) in ozellikler">
+          {{ index}}. {{ ozellik.name }} - {{ ozellik.age }}
+        </li>
+      </ul>
+      <br />
+      <!-- dört tane div oluşturuldu. -->
+      <div v-for="(ozellik,index) in ozellikler">
+        <h4>{{ index }}. {{ozellik.name}}</h4>
+        <p>{{ ozellik.age }}</p>
+      </div>
+      <hr />
+      <!-- bir tane divin içinde yazmak için yani sadece h4 ve p etiketlerinin içindekileri değiştirmek için template-->
+      <template v-for="(ozellik,index) in ozellikler">
+        <h4>{{ index }}. {{ozellik.name}}</h4>
+        <p>{{ ozellik.age }}</p>
+      </template>
+      <hr />
+      <template v-for="(ozellik,index) in ozellikler">
+        <div>
+          <h4>{{ index }}. {{ozellik.name}}</h4>
+          <p>{{ ozellik.age }}</p>
+        </div>
+      </template>
+      <hr />
+      <!-- her bir öğe için ayrı ayrı döngü oluşturuldu. -->
+      <template v-for="(ozellik,index) in ozellikler">
+        <div v-for="(val,key) in ozellik">
+          <p>{{ key }} : {{ val }}</p>
+        </div>
+      </template>
+      <hr />
+      <div v-for="(ozellik,index) in ozellikler">
+        <template v-for="(val,key) in ozellik">
+          <p>{{ key }} : {{ val }}</p>
+        </template>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
