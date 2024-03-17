@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Vue Instance</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app-one">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+    </div>
+    <div id="app-two">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+      <button v-on:click="changeTitle()">App 1'in başlığını Değiştir.</button>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
