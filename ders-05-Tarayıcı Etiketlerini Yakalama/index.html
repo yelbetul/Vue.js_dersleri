@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ders 04</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Etkinlikler (Events)</h1>
+      <p>Yaşım : {{ age }}</p>
+      <hr />
+      <button v-on:click="age++">Yaşımı Artır</button>
+      <button v-on:click="age--">Yaşımı Azalt</button>
+      <hr />
+      <button v-on:click="ekle">Yaşımı Fonksiyon ile Artır</button>
+      <button v-on:click="çıkar">Yaşımı Fonksiyon ile Azalt</button>
+      <hr />
+      <button v-on:click="ekle10(10)">Yaşımı 10 artır</button>
+      <button v-on:click="çıkar10(10)">Yaşımı 10 azalt</button>
+      <hr />
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

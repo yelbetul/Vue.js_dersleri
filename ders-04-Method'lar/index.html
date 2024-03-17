@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders 04</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>İsim: {{ name }}</p>
+        <p>Meslek: {{ job }}</p>
+        <p>Website: <a v-bind:href="website">Benim Websitem</a></p>
+        <p>kısa Website: <a :href="website">Benim Websitem</a></p>
+        <input type="text" :value="name">
+        <hr>
+        <!-- <p> {{ websiteTag }}</p> -->
+        <p v-html="websiteTag"></p>
+    </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
