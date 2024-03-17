@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Referanslar</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <h2>Refs</h2>
+        <input type="text" ref="icerik">
+        <button v-on:click="readRefs">Ref'leri gör</button>
+        <div ref="icerik2">Merhaba Dünya</div>
+        <p>{{ output }}</p>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
