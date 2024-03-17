@@ -3,19 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Klavye Olayları</title>
+    <title>Çift Yönde Veri İşleme</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <h1>Klavye Etkinlikleri</h1>
+      <h1>Çift Yönde Veri İşleme</h1>
       <label for="name">İsim</label>
-      <!-- enter tuşuna basıldığında console a yazdırılıyor. -->
-      <input type="text" v-on:keyup.enter="isimYakala"> 
-
+      <input type="text" v-model="name"/>
+      <p>{{ name }}</p>
       <label for="age">Yaş</label>
-      <!-- alt enter tuşlarına basıldığında console a yazdırılıyor -->
-      <input type="text" v-on:keyup.alt.enter="yasYakala">
+      <input type="text" v-model="age"/>
+      <p>{{ age }}</p>
     </div>
   </body>
   <script src="app.js"></script>
